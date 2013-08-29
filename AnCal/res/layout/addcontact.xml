@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Please select contacts:" />
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/llayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="54dp" >
+	
+	   	<ImageButton android:id="@+id/button3"
+	    	android:layout_width="@dimen/closeBtnWidth"
+	    	android:layout_height="wrap_content"
+	    	android:focusable="true"
+	    	android:layout_alignParentLeft="true"
+	    	android:layout_alignParentBottom="true"
+	    	android:text="@string/btnDelete"
+	    	android:gravity="center"
+			android:src="@drawable/checkmarkdelete"/>
+	    	
+	   	<ImageButton android:id="@+id/button2"
+	    	android:layout_width="@dimen/closeBtnWidth"
+	    	android:layout_height="wrap_content"
+	    	android:focusable="true"
+	    	android:layout_alignParentRight="true"
+	    	android:layout_alignParentBottom="true"
+	    	android:text="@string/btnSave"
+	    	android:gravity="center"
+			android:src="@drawable/checkmarkok"/>
+	
+		</RelativeLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/android:list"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/llayout"
+        android:layout_below="@id/text1"
+        android:drawSelectorOnTop="false" />
+
+</RelativeLayout>
